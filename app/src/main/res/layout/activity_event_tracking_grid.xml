@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".eventTrackingGrid">
+
+    <TextView
+        android:id="@+id/gridTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="76dp"
+        android:text="Events"
+        android:textColor="#5421AE"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/eventTableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addEventButton"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="266dp"
+        android:layout_marginBottom="30dp"
+        android:text="Add New Event"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/eventTableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Help with this layout provided by:
+     https://stackoverflow.com/questions/16199625/border-lines-for-cells-in-gridlayout-tablelayout-or-gridview
+     -->
+
+    <Button
+        android:id="@+id/smsMessagingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="257dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="96dp"
+        android:text="SMS Messaging"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventTableLayout" />
+
+    <Button
+        android:id="@+id/deleteEventButton"
+        android:layout_width="106dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="333dp"
+        android:text="Delete Event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventTableLayout" />
+
+    <TableLayout
+        android:id="@+id/eventTableLayout"
+        android:layout_width="401dp"
+        android:layout_height="295dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="14dp"
+        android:background="#969696"
+        android:shrinkColumns="0, 1, 2, 3, 4"
+        android:stretchColumns="0, 1, 2, 3, 4"
+        app:layout_constraintBottom_toTopOf="@+id/deleteEventButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- table heading -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#f1f1f1"
+                android:text="Name"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#f1f1f1"
+                android:text="Date"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#f1f1f1"
+                android:text="Location"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#f1f1f1"
+                android:text="Time"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_column="4"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#f1f1f1"
+                android:text="Edit"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- table data -->
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Yoga Session at the park" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="September 15th, 2022" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Central Park, NYC" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="10 a.m." />
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:text="Edit" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Classical Concert" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="October 30th, 2022" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Los Angeles, California" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="8 p.m." />
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:text="Edit" />
+        </TableRow>
+
+        <!-- table data -->
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Family Reunion" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="November 15th, 2022" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Atlanta, GA" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="11 a.m." />
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:text="Edit" />
+        </TableRow>
+        <!-- table data -->
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Podcasting Event" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="August 5th, 2022" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Chicago, Illinois" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="3 p.m." />
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:text="Edit" />
+        </TableRow>
+        <!-- table data -->
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Festival Event" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="September 25th, 2022" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Washington, D.C." />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="12 p.m." />
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:text="Edit" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/notificationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="96dp"
+        android:text="Alerts"
+        app:layout_constraintBottom_toTopOf="@+id/eventTableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gridTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
