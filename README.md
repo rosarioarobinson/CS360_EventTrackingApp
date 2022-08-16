@@ -1,1 +1,25 @@
-# Full Stack Development I Portfolio for CS 465
+# Mobile Architect & Programming Portfolio for CS 360
+
+### Briefly summarize the requirements and goals of the app you developed. What user needs was this app designed to address?
+
+I chose to develop the event tracking app, which focused on keeping track of dates and times of upcoming events. My app needed to address and include components such as a database that will store event details and log-ins, a log-in screen for the app, a grid that displays a user’s upcoming events, and allows users to add, remove, and edit events when they see fit. In addition to these features and requirements, I also had to implement a notification alert to notify a user when an event is approaching. I developed the app with each of these components in mind to ensure the best user experience for users.
+
+### What screens and features were necessary to support user needs and produce a user-centered UI for the app? How did your UI designs keep users in mind? Why were your designs successful?
+
+I kept my UI designs fairly simple and focused on addressing the necessary features I needed for my event tracking app. In the case of my app, I had to create seven separate XML files that displayed how the interface of the app will look and navigate with one another. For example, to add a new event to the event grid screen, I had to include and implement a button to move to the add new event screen so a user could input their event’s information into the database. Doing so creates a seamless experience for the user since the interface I have created was designed to be straightforward in both design and code.
+
+### How did you approach the process of coding your app? What techniques or strategies did you use? How could those be applied in the future?
+
+The process of coding this app was a little daunting at first because this was my first time building an app on this scale from scratch. I had to utilize a lot of resources, such as Zybooks and GeeksforGeeks to break down certain methods, such as how onCreate and onClick work to connect parts of my UI seamlessly. I essentially followed the rubric's requirements and worked my way down from there. I began working on the log-in activity first, as it was one of the most important parts to be able to see the event grid and sign-up pages. Once I was able to understand how methods and onClick worked within onCreate, the process became easier to implement as I went through my code. One section that I needed further research and time on was of course the database, as not only is it important for the overall functionality of the app and event grid, but understanding how it connects to other code files I created was also vital.
+
+### How did you test to ensure your code was functional? Why is this process important and what did it reveal?
+
+To test my code and XML files, I focused on utilizing Android Studio’s emulator. The emulator they provide allows a developer to fully see their code tested in various mobile apps in a localized environment. Through this process, I was able to notice issues I was having with my code, such as when I clicked on a certain button that would create a certain action, it would force close instead of opening to the correct page. This caused me to refactor and reach out for help on areas of my code that were creating these issues. 
+
+### Considering the full app design and development process, from initial planning to finalization, where did you have to innovate to overcome a challenge?
+
+There were a few challenges I came across while developing this album. First, understanding Android Studio itself. This was my first exposure and experience with using Android Studio and understanding how to navigate it was a learning process on its own. Second, understanding how the XML files worked and understanding constraints. I now realize how important constraints are for the overall look and interface of my app, and understand how XML files play an important role in the overall layout of my app. Lastly, understanding how to properly code a mobile app within Android Studio. Learning new methods such as onCreate and onClick took a while to understand and ensure I was not only implementing it correctly, but it was pointing to the correct XML file when I used the IDs I created. I do still have issues within my code, particularly with my onClick listeners, but learning how to create an Android app from the ground app was a valuable experience.
+
+### In what specific component from your mobile app were you particularly successful in demonstrating your knowledge, skills, and experience?
+
+I would say the most successful component of my app would be my UI design and to a certain extent, my code design as well. I took my time and drew out my mobile app design before implementing it, to give myself a better idea of how I wanted the event tracking app to look and what would be the best interface for users to navigate. Although my code is not perfect, I do believe my code design, implementing comments, and keeping it organized to allow me to continue working on this project in the future.
